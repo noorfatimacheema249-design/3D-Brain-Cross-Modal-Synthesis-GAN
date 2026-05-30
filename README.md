@@ -2,15 +2,15 @@
 
 An independent computational neuroscience project implementing a specialized 3D Generative Adversarial Network (GAN) to synthesize Fluid-Attenuated Inversion Recovery (FLAIR) sequences directly from standard, rapid T1-weighted structural MRI volumes.
 
-## 🧠 Clinical Significance
+## Clinical Significance
 FLAIR imaging is crucial for isolating neuroinflammatory, demyelinating, and neoplastic diseases in clinical neurology. However, physical acquisition is throttled by long scanner times and patient motion artifacts. This software-driven approach establishes a high-velocity path toward virtual sequence synthesis, reducing hospital overhead and scanning times.
 
-## 🛠️ Architecture Highlights
+##  Architecture Highlights
 * **Generator:** 3D Residually-Gated CNN embedded with custom non-local spatial routing gates (`AttentionGate3D`) to isolate structural margins.
 * **Discriminator:** 3D Patch-GAN Architecture acting as an automated, localized convolutional radiology reviewer.
 * **Loss Dynamics:** Balanced optimization utilizing strict L1-voxel spatial distance constraints coupled with native Binary Cross-Entropy (BCE) adversarial regularization.
 
-## 📊 Performance & Validation Metrics
+##  Performance & Validation Metrics
 Tested on **388 high-resolution 3D multi-modal scans (7.09 GB)** from the Medical Segmentation Decathlon dataset.
 
 * **Final Training Loss (Generator):** 1.8179
